@@ -219,7 +219,7 @@
         display: block;
         width: 24px;
         height: 24px;
-        fill: rgb(164, 107, 0);
+        fill:  var( var(--extra-color));
         position: absolute;
         top: 20px;
         left: 20px;
