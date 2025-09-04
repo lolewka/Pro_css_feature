@@ -1,3 +1,15 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --box-shadow: rgba(152, 152, 152, 0.2);
+    --extra-color: rgb(164, 107, 0);
+    --secondary-color: rgb(185, 145, 80);
+    --primary-color: rgb(255, 175, 24);
+    --text-accent-color: rgb(56, 36, 0);
+    --bold-font: MullerBold, sans-serif;
+    --extra-bold-font: MullerExtraBold, sans-serif;
+    --text-color: rgb(24, 26, 26);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,9 +34,15 @@ body {
     font-family: Muller, sans-serif;
 }
 
+body.dark-mode {
+    --background-color: rgb(37, 37, 37);
+    --text-color: rgb(255, 255, 255);
+    --text-accent-color:  rgb(255, 255, 255);
+}
+
 .header {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 3px 14px 1.2px rgba(152, 152, 152, 0.2);
+    background-color: var(--background-color);
+    box-shadow: 0 3px 14px 1.2px var(--box-shadow);
     padding: 16px 0 15px 0;
 }
 
@@ -52,11 +70,25 @@ body {
 .menu-item a {
     text-decoration: none;
     font-size: 16px;
-    color: rgb(164, 107, 0);
+    color: var(--extra-color);
     line-height: 1;
 }
 
+.theme {
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+    background: rgb(37, 37, 37);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+body.dark-mode .theme {
+    background: white;
+}
+
 .main {
+    background-color: var(--background-color);
     padding: 132px 0 81px 0;
 }
 
@@ -74,18 +106,18 @@ body {
 
 .main-info h1 {
     font-size: 45px;
-    font-family: MullerExtraBold, sans-serif;
+    font-family: var(--extra-bold-font);
     line-height: 1.222;
 
 
 }
 
 .double-title {
-    color: rgb(185, 145, 80);
+    color: var(--secondary-color);
 }
 
 .double-title span {
-    color: #ffaf18;
+    color: var(--primary-color);
 }
 
 
@@ -111,15 +143,15 @@ body {
 
 .advantage-title {
     font-size: 16px;
-    font-family: MullerExtraBold, sans-serif;
-    color: rgb(255, 175, 24);
+    font-family: var(--extra-bold-font);
+    color: var(--primary-color);
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 .advantage-description {
     font-size: 16px;
-    color: rgb(185, 145, 80);
+    color: var(--secondary-color);
 }
 
 .main-action {
@@ -128,9 +160,9 @@ body {
 
 .btn {
     font-size: 16px;
-    font-family: MullerBold, sans-serif;
+    font-family: var(--bold-font);
     color: rgb(2, 3, 3);
-    background-color: #ffaf18;
+    background-color: var(--primary-color);
     width: 224px;
     height: 60px;
     cursor: pointer;
@@ -141,12 +173,13 @@ body {
 }
 
 .products {
+    background-color: var(--background-color);
     padding: 80px 0 120px 0;
 }
 
 .products-title {
     font-size: 35px;
-    font-family: MullerBold, sans-serif;
+    font-family: var(--bold-font);
     color: rgb(189, 152, 92);
     text-align: center;
 }
@@ -160,7 +193,7 @@ body {
 
 .product {
     width: 282px;
-    box-shadow: 0 3px 14px 1.2px rgba(152, 152, 152, 0.2);
+    box-shadow: 0 3px 14px 1.2px var(--box-shadow);
     text-align: center;
     padding: 15px 20px;
     box-sizing: border-box;
@@ -176,14 +209,19 @@ body {
 
 .product-title {
     font-size: 18px;
-    font-family: MullerBold, sans-serif;
-    color: rgb(56, 36, 0);
+    font-family: var(--bold-font);
+    color: var(--text-accent-color);
+}
+.body.dark-mode .product-title {
+    --text-accent-color: rgb(255, 255, 255);
 }
 
+
 .product-text {
+    --line-height: 1.286;
     font-size: 14px;
-    color: rgb(24, 26, 26);
-    line-height: 1.286;
+    color: var(--text-color);
+    line-height: var(--line-height);
     height: 49px;
     margin: 14px 0 15px 0;
 }
@@ -195,6 +233,8 @@ body {
 }
 
 .order {
+    background-color: var(--background-color);
+
     padding: 120px 0 115px;
     overflow: hidden;
 }
@@ -211,21 +251,21 @@ body {
 
 .order-text-title {
     font-size: 35px;
-    font-family: MullerExtraBold, sans-serif;
+    font-family: var(--extra-bold-font);
     margin-bottom: 65px;
 }
 
 .order-text-message {
     font-size: 16px;
-    color: rgb(185, 145, 80);
+    color: var(--secondary-color);
     line-height: 1.5;
 }
 
 .order-input {
     border-width: 1px;
-    border-color: rgb(185, 145, 80);
+    border-color: var(--secondary-color);
     border-style: solid;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--background-color);
     width: 330px;
     height: 60px;
     font-size: 18px;
@@ -265,8 +305,8 @@ body {
 
 
 .footer {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 14px 1.2px rgba(152, 152, 152, 0.2);
+    background-color: var(--background-color);
+    box-shadow: 0 0 14px 1.2px var(--box-shadow);
     padding: 16px 0 15px;
 }
 
@@ -285,6 +325,7 @@ body {
 .burger {
     display: none;
 }
+
 .close {
     display: none;
 }

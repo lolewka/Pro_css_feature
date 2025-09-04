@@ -120,10 +120,12 @@
     .menu ul {
         max-width: 390px;
     }
-
-    .cart {
-        margin-left: 20px;
-    }
+.theme{
+    margin-left: 20px;
+}
+    /*.cart {*/
+    /*    margin-left: 20px;*/
+    /*}*/
 
     .main-info h1 {
         line-height: 45px;
@@ -219,7 +221,7 @@
         display: block;
         width: 24px;
         height: 24px;
-        fill: rgb(164, 107, 0);
+        fill:  var( var(--extra-color));
         position: absolute;
         top: 20px;
         left: 20px;
