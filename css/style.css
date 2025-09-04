@@ -7,6 +7,7 @@
     --text-accent-color: rgb(56, 36, 0);
     --bold-font: MullerBold, sans-serif;
     --extra-bold-font: MullerExtraBold, sans-serif;
+    --text-color: rgb(24, 26, 26);
 }
 
 * {
@@ -31,6 +32,12 @@
 
 body {
     font-family: Muller, sans-serif;
+}
+
+body.dark-mode {
+    --background-color: rgb(37, 37, 37);
+    --text-color: rgb(255, 255, 255);
+    --text-accent-color:  rgb(255, 255, 255);
 }
 
 .header {
@@ -67,7 +74,21 @@ body {
     line-height: 1;
 }
 
+.theme {
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+    background: rgb(37, 37, 37);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+body.dark-mode .theme {
+    background: white;
+}
+
 .main {
+    background-color: var(--background-color);
     padding: 132px 0 81px 0;
 }
 
@@ -152,6 +173,7 @@ body {
 }
 
 .products {
+    background-color: var(--background-color);
     padding: 80px 0 120px 0;
 }
 
@@ -190,11 +212,16 @@ body {
     font-family: var(--bold-font);
     color: var(--text-accent-color);
 }
+.body.dark-mode .product-title {
+    --text-accent-color: rgb(255, 255, 255);
+}
+
 
 .product-text {
+    --line-height: 1.286;
     font-size: 14px;
-    color: rgb(24, 26, 26);
-    line-height: 1.286;
+    color: var(--text-color);
+    line-height: var(--line-height);
     height: 49px;
     margin: 14px 0 15px 0;
 }
@@ -206,6 +233,8 @@ body {
 }
 
 .order {
+    background-color: var(--background-color);
+
     padding: 120px 0 115px;
     overflow: hidden;
 }
