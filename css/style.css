@@ -1,11 +1,12 @@
 :root {
     --background-color: rgb(255, 255, 255);
     --box-shadow: rgba(152, 152, 152, 0.2);
-     --extra-color:  rgb(164, 107, 0);
+    --extra-color: rgb(164, 107, 0);
     --secondary-color: rgb(185, 145, 80);
     --primary-color: rgb(255, 175, 24);
     --text-accent-color: rgb(56, 36, 0);
-
+    --bold-font: MullerBold, sans-serif;
+    --extra-bold-font: MullerExtraBold, sans-serif;
 }
 
 * {
@@ -62,7 +63,7 @@ body {
 .menu-item a {
     text-decoration: none;
     font-size: 16px;
-    color:  var(--extra-color);
+    color: var(--extra-color);
     line-height: 1;
 }
 
@@ -84,18 +85,18 @@ body {
 
 .main-info h1 {
     font-size: 45px;
-    font-family: MullerExtraBold, sans-serif;
+    font-family: var(--extra-bold-font);
     line-height: 1.222;
 
 
 }
 
 .double-title {
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .double-title span {
-    color:  var(--primary-color);
+    color: var(--primary-color);
 }
 
 
@@ -121,15 +122,15 @@ body {
 
 .advantage-title {
     font-size: 16px;
-    font-family: MullerExtraBold, sans-serif;
-    color:  var(--primary-color);
+    font-family: var(--extra-bold-font);
+    color: var(--primary-color);
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
 .advantage-description {
     font-size: 16px;
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .main-action {
@@ -138,9 +139,9 @@ body {
 
 .btn {
     font-size: 16px;
-    font-family: MullerBold, sans-serif;
+    font-family: var(--bold-font);
     color: rgb(2, 3, 3);
-    background-color:  var(--primary-color);
+    background-color: var(--primary-color);
     width: 224px;
     height: 60px;
     cursor: pointer;
@@ -156,7 +157,7 @@ body {
 
 .products-title {
     font-size: 35px;
-    font-family: MullerBold, sans-serif;
+    font-family: var(--bold-font);
     color: rgb(189, 152, 92);
     text-align: center;
 }
@@ -186,7 +187,7 @@ body {
 
 .product-title {
     font-size: 18px;
-    font-family: MullerBold, sans-serif;
+    font-family: var(--bold-font);
     color: var(--text-accent-color);
 }
 
@@ -221,19 +222,19 @@ body {
 
 .order-text-title {
     font-size: 35px;
-    font-family: MullerExtraBold, sans-serif;
+    font-family: var(--extra-bold-font);
     margin-bottom: 65px;
 }
 
 .order-text-message {
     font-size: 16px;
-    color:  var(--secondary-color);
+    color: var(--secondary-color);
     line-height: 1.5;
 }
 
 .order-input {
     border-width: 1px;
-    border-color:  var(--secondary-color);
+    border-color: var(--secondary-color);
     border-style: solid;
     background-color: var(--background-color);
     width: 330px;
