@@ -57,17 +57,29 @@ function createProductCard(product) {
     return card;
 }
 
-fetch("https://testologia.ru/pizzas")
-    .then(res => {
-        if (!res.ok) {
-            throw new Error('Error fetching pizzas');
-        }
-        return res.json();
-    })
-    .then(data => {
-        data.forEach(product => {
-            const card = createProductCard(product);
-            getProducts.appendChild(card);
-        });
-    })
+//
+// fetch("https://testologia.ru/pizzas")
+//     .then(res => {
+//         if (!res.ok) {
+//             throw new Error('Error fetching pizzas');
+//         }
+//         return res.json();
+//     })
+//     .then(data => {
+//         data.forEach(product => {
+//             const card = createProductCard(product);
+//             getProducts.appendChild(card);
+//         });
+//     })
 
+$.ajax({
+    url: "https://testologia.ru/pizzas",
+    method: "GET",
+    dataType: "json",
+    success: function (data) {
+        data.forEach(product => {
+            const card = createProductCard(product)
+            getProducts.append(card);
+        });
+    }
+})
