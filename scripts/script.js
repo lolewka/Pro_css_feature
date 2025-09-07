@@ -128,3 +128,13 @@ let cookie = {
     }
 
 }
+
+$.ajax(
+    {
+        method: "GET",
+        url: "https://testologia.ru/test-cookie?name=" + getProducts.value,
+        xhrFields: {
+            withCredentials: true,
+        }
+    }
+)
