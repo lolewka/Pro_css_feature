@@ -37,7 +37,7 @@ body {
 body.dark-mode {
     --background-color: rgb(37, 37, 37);
     --text-color: rgb(255, 255, 255);
-    --text-accent-color:  rgb(255, 255, 255);
+    --text-accent-color: rgb(255, 255, 255);
 }
 
 .header {
@@ -212,6 +212,7 @@ body.dark-mode .theme {
     font-family: var(--bold-font);
     color: var(--text-accent-color);
 }
+
 .body.dark-mode .product-title {
     --text-accent-color: rgb(255, 255, 255);
 }
@@ -329,3 +330,42 @@ body.dark-mode .theme {
 .close {
     display: none;
 }
+
+.cookie {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    padding: 20px;
+    background: var(--background-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 330px;
+    display: none;
+}
+
+.cookie-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--bold-font), sans-serif;
+
+}
+
+.cookie-title span {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.cookie-text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+
+}
+
+.cookie-button .btn {
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
